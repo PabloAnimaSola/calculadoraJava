@@ -9,14 +9,14 @@ public class Main{
 
         //Pide primer número para calcular
         System.out.println("Indica el primer numero para calcular");
-        int numero1 = s.nextInt();
+        float numero1 = s.nextFloat();
 
         // Pide segundo número para calcular
         System.out.println("Ahora indica el segundo numero para calcular");
-        int numero2 = s.nextInt();
+        float numero2 = s.nextFloat();
 
         // Inicializa variables del resultado y el tipo de operación para el final
-        int resultado = 0;
+        float resultado = 0;
         String valor = "";
 
         // Realiza la operación y asignación del tipo de operación para el final
@@ -35,7 +35,7 @@ public class Main{
                 System.exit(1);
             } else {
                 resultado = numero1 / numero2;
-                valor = "x";
+                valor = "/";
             }
         }
         // Imprime el resultado
