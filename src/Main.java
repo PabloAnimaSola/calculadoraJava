@@ -7,30 +7,38 @@ public class Main{
         Scanner s = new Scanner(System.in);
         int operacion = s.nextInt();
 
-        //Pide Primer número para calcular
+        //Pide primer número para calcular
         System.out.println("Indica el primer numero para calcular");
         int numero1 = s.nextInt();
 
         // Pide segundo número para calcular
-        System.out.print("Ahora indica el segundo numero para calcular");
+        System.out.println("Ahora indica el segundo numero para calcular");
         int numero2 = s.nextInt();
 
+        // Inicializa variables del resultado y el tipo de operación para el final
         int resultado = 0;
+        String valor = "";
 
-        if(operacion == 1){
+        // Realiza la operación y asignación del tipo de operación para el final
+        if (operacion == 1) {
             resultado = numero1 + numero2;
-        } else if (operacion == 2){
+            valor = "+";
+        } else if (operacion == 2) {
             resultado = numero1 - numero2;
+            valor = "-";
         } else if (operacion == 3) {
             resultado = numero1 * numero2;
-        } else if (operacion == 4){
-            if (numero2 == 0){
+            valor = "x";
+        } else if (operacion == 4) {
+            if (numero2 == 0) {
                 System.out.println("No se puede dividir entre cero.");
-            }
-            else {
+                System.exit(1);
+            } else {
                 resultado = numero1 / numero2;
+                valor = "x";
             }
         }
-        System.out.println("El resultado de" + numero1 + " " + operacion + " " + numero2 + " es: \n" + resultado);
+        // Imprime el resultado
+        System.out.println("El resultado de " + numero1 + " " + valor + " " + numero2 + " es " + resultado);
     }
 }
