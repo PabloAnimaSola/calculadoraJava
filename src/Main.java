@@ -20,7 +20,7 @@ public class Main {
                     System.out.println("El valor especificado no es un número.");
                     System.exit(1);
                 }
-                if (enteroOperacion < 1 || enteroOperacion > 5) {
+                if (enteroOperacion < 1 || enteroOperacion > 4) {
                     System.out.println("El valor especificado no se reconoce como tipo de operación.");
                     System.exit(1);
                 }
