@@ -33,6 +33,8 @@ public class Main {
         System.out.println("Ahora indica el segundo.");
         float num2 = s.nextFloat();
         float resultado = 0;
+        // Cerramos el scanner
+        s.close();
 
         switch (Integer.parseInt(operacion)) {
             case 1:
