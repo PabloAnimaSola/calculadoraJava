@@ -8,23 +8,21 @@ public class Main {
         String operacion = s.nextLine();
 
         // Validaciones para saber si está vacío el valor, si es un número el string, y si entra dentro de los tipos permitidos de operación (1-4)
-        switch (operacion.isEmpty()) {
-            case true:
-                System.out.println("No se ha especificado ningún tipo de operación.");
+        if (operacion.isEmpty()) {
+            System.out.println("No se ha especificado ningún tipo de operación.");
+            System.exit(1);
+        } else {
+            int enteroOperacion = Integer.parseInt(operacion);
+            try {
+                enteroOperacion = Integer.parseInt(operacion);
+            } catch (NumberFormatException noEsNumero) {
+                System.out.println("El valor especificado no es un número.");
                 System.exit(1);
-            case false:
-                int enteroOperacion = Integer.parseInt(operacion);
-                try {
-                    enteroOperacion = Integer.parseInt(operacion);
-                } catch (NumberFormatException noEsNumero) {
-                    System.out.println("El valor especificado no es un número.");
-                    System.exit(1);
-                }
-                if (enteroOperacion < 1 || enteroOperacion > 4) {
-                    System.out.println("El valor especificado no se reconoce como tipo de operación.");
-                    System.exit(1);
-                }
-                break;
+            }
+            if (enteroOperacion < 1 || enteroOperacion > 4) {
+                System.out.println("El valor especificado no se reconoce como tipo de operación.");
+                System.exit(1);
+            }
         }
         // Solicita los números a operar
         System.out.println("Indica el primer número para calcular.");
